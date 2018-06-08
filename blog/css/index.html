@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Blog | 更换&lt;input type=&quot;checkbox&quot;&gt;的样式</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/my-blog/assets/css/6.styles.82b7abc1.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.094f3970.js" as="script"><link rel="preload" href="/my-blog/assets/js/3.d8f5a287.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/0.54cb5d87.js"><link rel="prefetch" href="/my-blog/assets/js/1.144071f2.js"><link rel="prefetch" href="/my-blog/assets/js/2.c220e221.js"><link rel="prefetch" href="/my-blog/assets/js/4.84c480bc.js"><link rel="prefetch" href="/my-blog/assets/js/5.b5f4a675.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/6.styles.82b7abc1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/my-blog/" class="home-link router-link-active"><!----><span class="site-name">
+      My Blog
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>JavaScript</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/my-blog/blog/css/" class="active sidebar-link">更换&lt;input type=&quot;checkbox&quot;&gt;的样式</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Vue</span><span class="arrow right"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="更换-input-type-checkbox-的样式"><a href="#更换-input-type-checkbox-的样式" aria-hidden="true" class="header-anchor">#</a> 更换<code>&lt;input type=&quot;checkbox&quot;&gt;</code>的样式</h1><blockquote><p>通常情况下，各个浏览器对·<input type="checkbox">·的样式不一致，并且不那么美观。所以有时候设计需要我们更换原有的样式：
+<strong>html</strong>：</p></blockquote><div class="language- extra-class"><pre class="language-text"><code>&lt;span&gt;&lt;input type=&quot;checkbox&quot; class=&quot;input_check&quot; id=&quot;check3&quot; value=&quot;123&quot;&gt;&lt;label for=&quot;check1&quot;&gt;&lt;/label&gt;&lt;/span&gt;
+</code></pre></div><p><strong>css</strong>:</p><div class="language- extra-class"><pre class="language-text"><code>span{
+	position: relative;
+	}
+.input_check {
+	position: absolute;
+	visibility: hidden;
+	cursor:pointer;
+}
+.input_check+label {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid #677795;
+} 
+.input_check:checked+label:after {
+	content: &quot;&quot;;
+	position: absolute;
+	left: 2px;
+	bottom: 12px;
+	width: 9px;
+	height: 4px; 
+	border: 2px solid #677795;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg); 
+	transform: rotate(-45deg);
+}
+</code></pre></div><hr><p>其中必须注意，<strong>input的id必须和label的for一致</strong>，这是为了点击label联动点击了此checkbox。:after 实现的是对号的样式，方框旋转45度实现。</p><p>效果如下：
+<img src="http://upload-images.jianshu.io/upload_images/6230931-1eda3dab45814a83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="327ea443-cb56-48b6-a332-89b68b132f28.png"></p></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/my-blog/blog/javascript/" class="prev">
+          es6编程风格
+        </a></span><span class="next"><a href="/my-blog/blog/vue/">
+          第一次与vue亲密接触的挖坑和填坑之路
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/my-blog/assets/js/3.d8f5a287.js" defer></script><script src="/my-blog/assets/js/app.094f3970.js" defer></script>
+  </body>
+</html>
