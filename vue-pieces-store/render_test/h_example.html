@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h_example</title>
+</head>
+<body>
+	<div id="app">
+		<anchor :level="2" title="特性2">特性2</anchor>
+		<anchor :level="4" title="特性4">特性4</anchor>
+		<anchor :level="1" title="特性1">特性1</anchor>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		Vue.component('anchor',{
+			props: {
+				level: {
+					type: Number,
+					required: true
+				},
+				title: {
+					type: String,
+					default: ''
+				}
+			},
+			render: function (createElement) {
+				return createElement(
+					'h' + this.level,
+					[
+					createElement(
+						'a',
+						{
+							domProps: {
+								href: '#' + this.title
+							}
+						},
+						this.$slots.default
+						)
+					]
+
+				)
+			}
+		})
+
+		var app = new Vue({
+			el:'#app'
+		})
+	</script>
+</body>
+</html>

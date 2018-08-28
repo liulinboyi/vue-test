@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>repeat_component_render</title>
+	<script src='js/vue.js'></script>
+</head>
+<body>
+	<div id="app">
+		<ele>
+			
+		</ele>
+	</div>
+	<script>
+		//局部声明组件
+		var Child = {
+			render: function (createElement) {
+				return createElement('p','text');
+			}
+		};
+		//全局注册组件
+		Vue.component('ele',{
+			render: function(createElement) {
+				return createElement('div',
+					Array.apply(null,{
+						length: 5
+					}).map(function(){
+						return createElement(Child);
+					})
+				);
+			}
+		});
+
+		var app = new Vue({
+			el:'#app'
+		})
+	</script>
+</body>
+</html>

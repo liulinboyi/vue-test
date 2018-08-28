@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/solar.css">
+    <title>solar System</title>
+</head>
+<body>
+    <div id="app">
+        <div class="solarBox opening set-speed view-3D zoom-large data-close controls-close">
+            <div id="universe" class="scale-stretched">
+                <div id="galaxy">
+                    <div id="solar-system" class="earth">
+                        <div class="orbit" v-for="(item,index) in ballgroup" :key="index" :class="runIs" :id=getIndexball(index) @mouseover="hoverStop"
+                            @mouseout="outBall">
+                            <div class="pos" :class="runIs">
+                                <div class="planet" @click="enterPages(index)">
+                                    <p class="starLabel" v-text="setLabel(index)"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sun">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let solarSystem = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    ballgroup: 12,
+                    runIs: 'runningS'
+                }
+            },
+            methods: {
+                getIndexball(index) {
+                    return 'ball' + index;
+                },
+                setLabel(index) {
+                    if (index === 3) return 'page1';
+                    if (index === 4) return 'page2';
+                },
+                enterPages(index) {
+                    // if (index === 4) this.$router.push('/page1');
+                    // if (index === 3) this.$router.push('/page2');
+                    if (index === 4) alert('跳转到page1');
+                    if (index === 3) alert('跳转到page2');
+                },
+                hoverStop() {
+                    this.runIs = 'stopS';
+                },
+                outBall() {
+                    this.runIs = 'runningS';
+                }
+            }
+        })
+    </script>
+</body>
+</html>

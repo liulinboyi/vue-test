@@ -1,0 +1,16 @@
+{
+  "seller": {
+    "name": "粥品香坊（回龙观）",
+    "description": "蜂鸟专送",
+    "deliveryTime": 38,
+    "score": 4.2
+  },
+  "ratings":{
+      "id":1,"name":"wangzi","age":24
+  },
+  "goods":[
+       {"id":1,"name":"wangzi","age":24},
+       {"id":2,"name":"lisi","age":44},
+       {"id":3,"name":"zhangsan","age":22}
+  ]
+}

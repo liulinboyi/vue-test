@@ -1,0 +1,35 @@
+nav{
+	background:#1a427d;
+	width:150px;
+	height:100%;
+	text-align:center;
+	a{
+		font-size:16px;
+		font-weight:600;
+		color:rgba(125,188,254,.7);
+		display:block;
+		margin:50px auto;
+
+	}
+	.router-link-active{
+		color:#fff;
+	}
+}
+
+#entity_contents{
+		width:100%;
+		flex:1;
+	.nav-right{
+		border-bottom:1px solid #ccc;
+	}
+	a{
+		font-size:14px;
+		display: inline-block;
+		float:right;
+		padding:5px 10px;
+	}
+	.router-link-active{
+		color:#000;
+		background:pink;
+	}
+}

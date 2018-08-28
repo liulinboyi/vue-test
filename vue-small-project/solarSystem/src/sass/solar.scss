@@ -1,0 +1,190 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+.solarBox{
+    position: relative;
+    width:100%;
+    height:100%;
+    #universe{
+        width:100%;
+        height:100%;
+        z-index: 1;
+        #galaxy {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:url(../images/index_bg.png) no-repeat center center;
+            background-size:100% 100%;
+        }
+    }
+}
+
+#solar-system {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(68deg) rotateY(-6deg);
+    // transform: rotateX(65deg);
+    padding:0 50px;
+    pointer-events:none;
+}
+
+/* --------------------------------------------------------------------------- animations */
+@keyframes orbit {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(-360deg);
+    }
+  }
+  @keyframes invert {
+    0% {
+      transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+
+
+
+.orbit{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px solid rgba(82, 210, 224,0.5);
+    transform-style: preserve-3d;
+    animation-name: orbit;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    // animation-play-state:paused;
+    animation-timing-function: linear;
+    pointer-events:none;
+}
+.pos {
+    position: absolute;
+    top: 50%;
+    width: 2em;
+    height: 2em;
+    margin:0;
+    transform-style: preserve-3d;
+    animation-name: invert;
+    animation-duration: 100s;
+    animation-iteration-count:infinite;
+    // animation-play-state:paused;
+    animation-timing-function: linear;
+}
+.planet {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    z-index: 100;
+    // animation-play-state:paused;
+    animation-duration: 100s;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1.08em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    pointer-events:auto;
+    // background-color:#000;
+    .starLabel{
+        font-family: "SourceHanSansCN";
+        font-size: 0.18rem;
+        position: absolute;
+        left:50%;
+        margin-left:-0.4rem;
+        color: #fff;
+        text-align: center;
+        width: 0.8rem;
+        bottom: -0.28rem;
+    }
+}
+.orbit:nth-child(4) .starLabel{color:#eeb364;}
+.orbit:nth-child(5) .starLabel{color:#55bef3;}
+
+.stopS{
+    animation-play-state:paused;
+}
+.runningS{
+    animation-play-state:running;
+}
+
+
+#ball0{width:42em;height:42em;margin-top:-21em;margin-left:-21em;z-index:6;}
+#ball1{width:60em;height:60em;margin-top:-30em;margin-left:-30em;z-index:5;}
+#ball2{width:74em;height:74em;margin-top:-37em;margin-left:-37em;z-index:4;}
+#ball3{width:74em;height:74em;margin-top:-37em;margin-left:-37em;z-index:4;}
+#ball4{width:94em;height:94em;margin-top:-47em;margin-left:-47em;z-index:3;}
+#ball5{width:94em;height:94em;margin-top:-47em;margin-left:-47em;z-index:3;}
+#ball6{width:94em;height:94em;margin-top:-47em;margin-left:-47em;z-index:3;}
+#ball7{width:94em;height:94em;margin-top:-47em;margin-left:-47em;z-index:3;}
+#ball8{width:112em;height:112em;margin-top:-56em;margin-left:-56em;z-index:2;}
+#ball9{width:112em;height:112em;margin-top:-56em;margin-left:-56em;z-index:2;}
+#ball10{width:112em;height:112em;margin-top:-56em;margin-left:-56em;z-index:2;}
+#ball11{width:112em;height:112em;margin-top:-56em;margin-left:-56em;z-index:2;}
+
+
+#sun{
+    position: absolute;
+    z-index:1;
+    top:40%;
+    left:53%;
+    width:13.26rem;
+    height:7.04rem;
+    margin-left:-6.63rem;
+    margin-top:-3.52rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../images/solar/ball1.png');
+    background-size: 100% 100%;
+    transform: rotateX(-68deg) rotateY(6deg);
+    // transform: rotateX(-65deg);
+}
+
+#ball0 .pos{top:10%;left:15%;}
+#ball1 .pos{top:16%;left:87%;}
+#ball2 .pos{top:90%;left:77%;}
+#ball3 .pos{top:72%;left:4.5%;}
+#ball4 .pos{top:99%;left:50%;}
+#ball5 .pos{top:25%;left:93%;}
+#ball6 .pos{top:12%;left:15.5%;}
+#ball7 .pos{top:83.5%;left:85%;}
+#ball8 .pos{top:32%;left:2%;}
+#ball9 .pos{top:1%;left:63%;}
+#ball10 .pos{top:45%;left:99%;}
+#ball11 .pos{top:1%;left:35%;}
+
+#ball0 .planet{background-color:#000;background-image: url(../images/solar/ball21.png);font-size:0.39rem;}
+#ball1 .planet{background-image: url(../images/solar/ball31.png);font-size:0.74rem;}
+#ball2 .planet{background-image: url(../images/solar/ball41.png);font-size:1.2rem;}
+#ball3 .planet{cursor: pointer;background-image: url(../images/solar/ball42.png);font-size:1.34rem;}
+#ball4 .planet{cursor: pointer;background-image: url(../images/solar/ball51.png);font-size:1.78rem;}
+#ball5 .planet{background-image: url(../images/solar/ball52.png);font-size:1.04rem;}
+#ball6 .planet{background-image: url(../images/solar/ball53.png);font-size:0.82rem;}
+#ball7 .planet{background-color:#000;background-image: url(../images/solar/ball54.png);font-size:0.35rem;}
+#ball8 .planet{background-image: url(../images/solar/ball61.png);font-size:1.47rem;}
+#ball9 .planet{background-image: url(../images/solar/ball62.png);font-size:1.31rem;}
+#ball10 .planet{background-image: url(../images/solar/ball63.png);font-size:0.84rem;}
+#ball11 .planet{background-color:#000;background-image: url(../images/solar/ball55.png);font-size:0.14rem;}
+
+#ball0, #ball0 .pos, #ball0 .planet{animation-duration: 5s;}
+#ball1, #ball1 .pos, #ball1 .planet{animation-duration: 30s;}
+#ball2, #ball2 .pos, #ball2 .planet{animation-duration: 60s;}
+#ball3, #ball3 .pos, #ball3 .planet{animation-duration: 60s;}
+#ball4, #ball4 .pos, #ball4 .planet{animation-duration: 100s;}
+#ball5, #ball5 .pos, #ball5 .planet{animation-duration: 100s;}
+#ball6, #ball6 .pos, #ball6 .planet{animation-duration: 100s;}
+#ball7, #ball7 .pos, #ball7 .planet{animation-duration: 100s;}
+#ball8, #ball8 .pos, #ball8 .planet{animation-duration: 200s;}
+#ball9, #ball9 .pos, #ball9 .planet{animation-duration: 200s;}
+#ball10, #ball10 .pos, #ball10 .planet{animation-duration: 200s;}
+#ball11, #ball11 .pos, #ball11 .planet{animation-duration: 200s;}

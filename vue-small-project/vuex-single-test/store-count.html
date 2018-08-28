@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vuex-test</title>
+	<script src="js/vue.js"></script>
+	<script src="https://unpkg.com/vuex"></script>
+	<style type="text/css">
+		button{
+			width:80px;
+			padding:5px 1px;
+			border-radius: 5px;
+			border:1px solid #eee;
+			background: aliceblue;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		{{count}}
+		<br>
+		<button @click="increments">increment</button>
+		<button @click="desc" v-bind:disabled="disabled">desc</button>
+	</div>
+	<script type="text/javascript">
+		const store = new Vuex.Store({
+		  state: {
+		    count: 0
+		  },
+		  mutations: {
+		    increment (state) {
+		      state.count++
+		    },
+		    desc (state){
+		    	state.count--
+		    }
+		  }
+		})
+		const app = new Vue({
+			el:"#app",
+			data (){
+				return {
+					disabled:true
+				}
+			},
+			computed: {
+			    count () {
+			      return store.state.count
+			    }
+			},
+			watch:{
+				count(){
+					if(this.count>0){
+						this.disabled = false
+					}else{
+						this.disabled = true
+					}
+				}
+			},
+			methods:{
+				increments (){
+					store.commit('increment')
+				},
+				desc (){
+					store.commit('desc')
+				}
+			}
+		})
+	</script>
+</body>
+</html>

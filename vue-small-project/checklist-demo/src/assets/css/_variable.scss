@@ -1,0 +1,11 @@
+$vue-blue:blue;
+
+%border{
+	border:1px solid red;
+}
+
+@mixin border-radius($w:50%){
+	-webkit-border-radius:$w;
+	-moz-border-radius:$w;
+	border-radius:$w;
+}

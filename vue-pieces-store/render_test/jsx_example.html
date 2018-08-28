@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsx_example</title>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ele></ele>
+	</div>
+	<script>
+		Vue.component('ele', {
+			render: function(createElement){
+				return createElement('div', {
+					props: {
+						text: 'some text'
+					},
+					attrs: {
+						id: 'myDiv'
+					}
+				})
+			}
+		})
+	</script>
+</body>
+</html>

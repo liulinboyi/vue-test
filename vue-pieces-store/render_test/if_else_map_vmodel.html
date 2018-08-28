@@ -1,0 +1,77 @@
+<!-- 2018-04-11 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if_else_map_vmodel_render</title>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ele :list="list"></ele>
+		<button @click="handleClick">显示列表</button>
+
+		<vmodel></vmodel>
+	</div>
+	<script>
+		Vue.component('ele',{
+			render: function(createElement) {
+				if(this.list.length) {
+					return createElement('ul',this.list.map(function(item){
+						return createElement('li',item);
+					}))
+				}else{
+					return createElement('p','列表为空');
+				}
+			},
+			props: {
+				list: {
+					type: Array,
+					default: function(){
+						return [];
+					}
+				}
+			}
+		})
+		//render实现v-model
+		Vue.component('vmodel',{
+			render: function(createElement){
+				var _this = this;
+				return createElement('div',[
+					createElement('input', {
+						domProps:{
+							value: this.value
+						},
+						on: {
+							input: function (event){
+								_this.value = event.target.value;
+							}
+						}
+					}),
+					createElement('p','value:' + this.value)
+				])
+			},
+			data: function () {
+				return {
+					value: ''
+				}
+			}
+		});
+		var app = new Vue({
+			el:'#app',
+			data: {
+				list: []
+			},
+			methods: {
+				handleClick: function () {
+					this.list = [
+						'《Vue.js入门》',
+						'《Vue.js实践》',
+						'《Vue.js进阶》'
+					]
+				}
+			}
+		})
+	</script>
+</body>
+</html>
