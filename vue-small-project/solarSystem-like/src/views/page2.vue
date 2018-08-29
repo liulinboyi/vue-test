@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="Toindex">page1回到首页</button>
+        <button @click="Toindex">page2回到首页</button>
     </div>
 </template>
 <script>
@@ -12,7 +12,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style>
     button{
         position: absolute;
         top:20%;

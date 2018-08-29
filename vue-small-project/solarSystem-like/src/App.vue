@@ -9,9 +9,9 @@ export default {
 }
 </script>
 <style lang="scss">
-    html,body,#app{
+    #app{
         width:100%;
         height:100%;
     }
-//   @import "@/sass/reset.scss";
+  @import "@/sass/reset.scss";
 </style>
