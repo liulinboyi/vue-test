@@ -31,6 +31,7 @@ There are some small vue learning examples.
 * render的练习
 * 自定义指令的练习：`v-time` `v-birth` `v-foucs` `v-ctrlq` `v-clickoutside`
 
-## vue-amcharts-bar-npm  
-> 练习使用npm发布个vue包
-
+## vue-npm-packages  
+> 练习使用npm发布个vue包 （在my-pagenation中将这两个组件进行了试用，可行）
+* vue-amcharts-bar-npm: amcharts的bar图简单封装成组件
+* vue-solar-system: 一个类太阳系的首页应用包

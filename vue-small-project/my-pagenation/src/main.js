@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import mlBar2d from 'vue-amcharts-bar'
+import solarSystem from 'vue-solar-system'
 
 Vue.use(mlBar2d);
+Vue.use(solarSystem);
 
 Vue.config.productionTip = false
 

@@ -32,6 +32,7 @@
 </template>
 <script>
 export default {
+    name: 'solar-system',
     data () {
         return {
             runIs: 'runningS'
@@ -65,6 +66,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-    @import "@/sass/reset.scss";
-    @import "@/sass/solar.scss";
+    @import "./assets/sass/reset.scss";
+    @import "./assets/sass/solar.scss";
 </style>
