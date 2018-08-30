@@ -90,37 +90,3 @@ select, option{
 .clearfix{
     *zoom:1;
 }
-
-
-/*------------------------------ 媒体监测，当分辨率小于1024后，通过js动态设置html元素字体------------------------------*/
-html{
-    font-size:100px;
-}
-/*--屏幕小于1024--*/
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 60px;
-  }
-}
-
-/*--屏幕大于等于1024，小于1280--*/
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  html {
-    font-size: 77px;
-  }
-}
-
-/*--屏幕大于等于1280，小于1366--*/
-@media screen and (min-width: 1280px) and (max-width: 1366px) {
-  html {
-    font-size: 80px;
-  }
-}
-
-/*--屏幕大于等于1366，小于1680--*/
-@media screen and (min-width: 1366px) and (max-width: 1680px) {
-  html {
-    font-size: 90px;
-  }
-}
-
